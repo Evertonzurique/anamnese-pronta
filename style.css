@@ -1,0 +1,556 @@
+/* ===== VARIÁVEIS CSS ===== */
+:root {
+    --azul-tech: #3D7CB8;
+    --azul-escuro: #2A5C8B;
+    --verde-menta: #6BD6B1;
+    --lilas: #B8A1C9;
+    --cinza-claro: #F5F7FA;
+    --dourado: #FFD700;
+    --texto-cinza: #F5F7FA;
+    --font-titulo: 'Poppins', sans-serif;
+    --font-corpo: 'Open Sans', sans-serif;
+    --gradient: linear-gradient(135deg, var(--verde-menta), var(--lilas));
+}
+
+/* ===== RESET E CONFIGURAÇÕES GLOBAIS ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ===== SISTEMA DE GRID RESPONSIVO ===== */
+.row {
+    width: 100%;
+    display: block;
+}
+
+.row::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+[class*="col-"] {
+    float: left;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+/* ===== RESPONSIVIDADE PARA TABLETS ===== */
+@media (max-width: 768px) {
+    .col-1, .col-2, .col-3 {width: 50%;}
+    .col-4, .col-5, .col-6 {width: 100%;}
+    .col-7, .col-8, .col-9, .col-10, .col-11, .col-12 {width: 100%;}
+}
+
+/* ===== RESPONSIVIDADE PARA MOBILE ===== */
+@media (max-width: 480px) {
+    [class*="col-"] {
+        width: 100%;
+        float: none;
+    }
+}
+
+/* ===== ESTILOS DO CORPO DA PÁGINA ===== */
+body {
+    font-family: var(--font-corpo);
+    background-image: url(imagens/background.png); 
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    overflow: auto;
+    max-width: 100%;
+    height: auto; 
+    color: var(--texto-cinza);
+    line-height: 1.6;
+}
+
+/* ===== ESTILOS DO LOGO E TÍTULO ===== */
+.logo-com-texto {
+    /* margin: 0 0 0 50px; */
+    margin: 0;
+    max-width: 184px;
+    height: auto;
+}
+
+.Anamnese {
+    margin: 10px 0;
+    text-align: center;
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+.Anamnese .info-icon {
+    color: var(--verde-menta);
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+
+/* ===== CONTAINER PRINCIPAL ===== */
+.container {
+    max-width: 1400px;
+    height: auto;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* ===== CABEÇALHO ===== */
+header {
+    margin: 0;
+}
+
+.header-logo {
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+
+.header-title {
+    text-align: center;
+}
+
+.header-progress {
+    padding: 0;
+    text-align: right;
+}
+
+/* ===== TIPOGRAFIA ===== */
+h1, h2, h3, h4 {
+    font-family: var(--font-titulo);
+    color: #F5F7FA; 
+    font-weight: 600;
+}
+
+h1 {
+    font-size: 2rem;
+    color: #F5F7FA;
+    margin-bottom: 0px;
+}
+
+/* ===== BARRA DE PROGRESSO ===== */
+.progress-container {
+    margin-bottom: 20px;
+}
+
+.progress-text {
+    font-weight: bold;
+    text-align: right;
+    display: block;
+    font-size: 0.7rem;
+    color: #2A5C8B;
+    margin-right: 20px;
+    margin-bottom: 5px;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 20px;
+    background-color: #e9ecef;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    background: var(--gradient);
+    width: 0%;
+    transition: width 0.3s ease;
+}
+
+/* ===== LAYOUT PRINCIPAL ===== */
+.content {
+    margin-top: 0px;
+}
+
+/* ===== SIDEBAR ===== */
+.sidebar {
+    background-image: url(imagens/sideBarLeft1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 10px;
+    color: white;
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.774);
+    min-height: 500px;
+}
+
+/* ===== NAVEGAÇÃO ===== */
+.navBOrda{
+    padding: 20px 10px 10px 10px; 
+    border: 1px solid #eaeaea;
+    border-radius: 10px;
+}
+
+.navigation ul {
+    list-style: none;
+}
+
+.navigation li {
+    margin: 10px;
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 15px;
+    border-radius: 8px;
+    color: rgba(255, 255, 255, 0.8);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+    border: none;
+    background: transparent;
+    text-align: left;
+    font-family: var(--font-corpo);
+}
+
+.nav-item:hover {
+    color: white;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.nav-item.active {
+    color: white;
+    background: var(--gradient);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.nav-item i {
+    font-size: 1rem;
+    width: 20px;
+    text-align: center;
+}
+
+/* ===== CONTAINER DO FORMULÁRIO ===== */
+.form-container {
+    background-image: url(imagens/Frame\ 12.png); 
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 10px;
+    padding: 20px;
+    color: white;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.774);
+    min-height: 500px;
+    
+}
+
+/* ===== CARDS ===== */
+.card {
+    border: 1px solid #eaeaea;
+    border-radius: 10px;
+    padding: 25px;
+    margin-bottom: 20px;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.card-header {
+    margin-bottom: 20px;
+    border-bottom: 1px solid #eaeaea;
+    padding-bottom: 15px;
+}
+
+.card-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.4rem;
+}
+
+.card-content {
+    display: block;
+}
+
+/* Estilo para a nova seção de informações */
+.info-section {
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    border-bottom: 1px dashed rgba(255, 255, 255, 0.3);
+}
+
+.info-section:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+.info-section h3 {
+    color: var(--verde-menta);
+    font-size: 1.2rem;
+    margin-top: 0;
+}
+
+.info-section strong {
+    color: var(--verde-menta);
+}
+
+
+/* ===== GRUPOS DE FORMULÁRIO ===== */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #F5F7FA;
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-family: var(--font-corpo);
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+.form-control:focus {
+    outline: none;
+    border-color: var(--azul-tech);
+    box-shadow: 0 0 0 3px rgba(61, 124, 184, 0.2);
+}
+
+textarea.form-control {
+    min-height: 100px;
+    resize: vertical;
+}
+
+/* ===== GRUPOS DE CHECKBOX E RADIO ===== */
+.checkbox-group, .radio-group {
+    margin-bottom: 15px;
+}
+
+.checkbox-label, .radio-label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 8px;
+    cursor: pointer;
+}
+
+.form-check-input {
+    cursor: pointer;
+}
+
+/* ===== AÇÕES DO FORMULÁRIO ===== */
+.form-actions {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.form-actions::after {
+    content: none;
+}
+
+/* ===== BOTÕES ===== */
+.btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    margin: 0 5px;
+}
+
+.btn-primary {
+    background: var(--gradient);
+    color: white;
+}
+
+.btn-primary:hover {
+    opacity: 0.9;
+}
+
+.btn-secondary {
+    background: var(--gradient);
+    color: white;
+}
+
+.btn-secondary:hover {
+    opacity: 0.9;
+}
+
+.btn-success {
+    background: var(--gradient);
+    color: white;
+}
+
+.btn-success:hover {
+    opacity: 0.9;
+}
+
+/* Esconde todos os botões por padrão; JS cuidará da exibição */
+#prev-btn, #next-btn, #submit-btn {
+    display: none;
+}
+
+/* ===== SEÇÕES DO FORMULÁRIO ===== */
+.form-section {
+    display: none;
+}
+
+.form-section.active {
+    display: block;
+}
+
+/* ===== POP-UP DE INFORMAÇÕES ===== */
+.popup-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.popup-content {
+    background-color: var(--cinza-claro);
+    color: #222;
+    padding: 25px;
+    border-radius: 10px;
+    max-width: 600px;
+    width: 90%;
+    max-height: 80vh;
+    overflow-y: auto;
+    position: relative;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.4);
+    font-family: var(--font-corpo);
+    line-height: 1.5;
+}
+
+.popup-content h2, .popup-content h3 {
+    color: var(--azul-escuro);
+    font-family: var(--font-titulo);
+    margin-bottom: 10px;
+    text-align: center;
+}
+.popup-content h3 {
+    text-align: left;
+    margin-top: 20px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 5px;
+}
+
+.popup-content ul {
+    margin-left: 20px;
+    margin-bottom: 15px;
+}
+
+.popup-content li {
+    margin-bottom: 5px;
+}
+
+.popup-content strong {
+    color: var(--azul-tech);
+}
+
+.popup-content .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    color: #888;
+    line-height: 1;
+    padding: 0;
+    transition: color 0.2s;
+}
+
+.popup-content .close-btn:hover {
+    color: #333;
+}
+
+.popup-header {
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+.popup-body .citation-text {
+    text-align: right;
+    display: block;
+    font-size: 0.7rem;
+    color: #666;
+    margin-top: 20px;
+}
+
+/* ===== RESPONSIVIDADE ESPECÍFICA ===== */
+@media (min-width: 769px) {
+    .form-container {
+        margin: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+    .sidebar {
+        margin-bottom: 20px;
+        padding: 20px;
+    }
+    .form-container {
+        padding: 15px;
+    }
+    h1 {
+        font-size: 1.5rem;
+    }
+    .card {
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 10px;
+    }
+    .sidebar {
+        padding: 15px;
+    }
+    .form-container {
+        padding: 10px;
+    }
+    h1 {
+        font-size: 1.2rem;
+    }
+    .card {
+        padding: 10px;
+    }
+    .btn {
+        width: 100%;
+        margin: 0;
+    }
+    .form-actions {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .popup-content {
+        max-width: 95%;
+    }
+}
