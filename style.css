@@ -68,7 +68,7 @@
 /* ===== ESTILOS DO CORPO DA PÁGINA ===== */
 body {
     font-family: var(--font-corpo);
-    background-image: url(imagens/background.png); 
+    background-image: url(imagens/background_global.webp); 
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -83,7 +83,7 @@ body {
 .logo-com-texto {
     /* margin: 0 0 0 50px; */
     margin: 0;
-    max-width: 184px;
+    max-width: 130px;
     height: auto;
 }
 
@@ -179,7 +179,7 @@ h1 {
 
 /* ===== SIDEBAR ===== */
 .sidebar {
-    background-image: url(imagens/sideBarLeft1.png);
+    background-image: url(imagens/Side_bar_left1_barra_Lateral_esquerda.webp);
     background-repeat: no-repeat;
     background-size: cover;
     border-radius: 10px;
@@ -239,7 +239,7 @@ h1 {
 
 /* ===== CONTAINER DO FORMULÁRIO ===== */
 .form-container {
-    background-image: url(imagens/Frame\ 12.png); 
+    background-image: url(imagens/Fundo_Form_Container_Formulario.webp); 
     background-repeat: no-repeat;
     background-size: cover;
     border-radius: 10px;
